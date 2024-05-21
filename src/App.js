@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import 'remixicon/fonts/remixicon.css'
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import LoginPage from './LibraryManger/LoginPage';
+import './LibraryManger/LoginPage.css'
+import RegistrationPage from './LibraryManger/RegistrationPage';
+import './LibraryManger/RegistrationPage.css'
+import NavBar from './Common/NavBar';
+import './Common/NavBar.css'
+import Footer from './Common/Footer';
+import './Common/Footer.css'
+import HomePage from './Common/HomePage';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='Mngr/Login' element={[<NavBar/>,<LoginPage/>]}/>
+        <Route path='Mngr/Registration' element={[<NavBar/>,<RegistrationPage/>]}/>
+        <Route path='Home' element={[<NavBar/>,<HomePage/>]}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

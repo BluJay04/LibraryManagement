@@ -1,0 +1,13 @@
+.background-login{
+ background-image: url("../Assets/logo_make_11_06_2023_36.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
+ margin-top: 0%;
+}
+.SignUp{
+ padding-top: 100px;
+}
+.LoginPage{
+ padding-top: 130px;
+ padding-bottom: 100px;
+}

@@ -1,0 +1,14 @@
+.background-register{
+ background-image: url('../Assets/dry-autumn-leaves-with-stack-books.jpg');
+ background-repeat: no-repeat;
+ background-size: cover;
+ height: 100vh;
+ color: white;
+}
+.SignUp{
+ padding-bottom: 100px;
+}
+.register-title{
+ padding-top: 70px;
+ padding-bottom: 50px;
+}
