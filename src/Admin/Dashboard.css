@@ -1,0 +1,42 @@
+.img-manager{
+ background-image: url('../Assets/postman_8803787.png');
+ background-size: cover;
+ height: 10rem;
+ width: 10rem;
+}
+
+.img-user{
+ background-image: url('../Assets/editorial_6368888.png');
+ background-size: cover;
+ height: 10rem;
+ width: 10rem;
+}
+
+.img-products{
+ background-image: url('../Assets/coins_6710807.png');
+ background-size: cover;
+ height: 10rem;
+ width: 10rem;
+}
+
+.img-sales{
+ background-image: url('../Assets/bull-market_6527012.png');
+ background-size: cover;
+ height: 10rem;
+ width: 10rem;
+}
+
+.text-bg-warning{
+ --bs-btn-hover-color: var(--bs-white);
+ --bs-btn-active-border-color: var(--bs-btn-hover-color);
+}
+
+.img-shelf{
+ background-image: url('../Assets/book-shelf_1056197.png');
+ background-size: cover;
+ border-radius: 90%;
+ background-position-y: -0.4px;
+ margin: 12px;
+ height: 4rem;
+ width: 4rem;
+}
