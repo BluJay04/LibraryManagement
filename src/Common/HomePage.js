@@ -17,7 +17,9 @@ function HomePage() {
  console.log(api);
 
   return (
-   <div className="container-fluid overflow-hidden bg-dark p-4">
+   <div className="container-fluid overflow-hidden bg-dark p-4" >
+
+
    <div className="row g-5 d-flex">
     {api.map((a)=>{
       return(
