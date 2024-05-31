@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 
-function HomePage() {
- const[api,setApi]=useState([])
+const[api,setApi]=useState([])
  useEffect(()=>{
  axios.post(`http://localhost:4000/viewall`)
  .then((res)=>{
@@ -16,6 +15,7 @@ function HomePage() {
 
  console.log(api);
 
+function ViewUsers() {
   return (
    <div className="container-fluid overflow-hidden bg-dark p-4">
    <div className="row g-5 d-flex">
@@ -40,4 +40,4 @@ function HomePage() {
   )
 }
 
-export default HomePage
+export default ViewUsers

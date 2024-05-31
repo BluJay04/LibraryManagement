@@ -1,6 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function NavBar() {
+  const navigate=useNavigate()
   return (
    <nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
     <div class="container-fluid">
@@ -13,7 +15,7 @@ function NavBar() {
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#!">Home</a>
+            <a class="nav-link" aria-current="page" href="/Home">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#!">About</a>
