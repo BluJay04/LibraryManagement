@@ -31,6 +31,7 @@ function Userreg() {
         console.log(result)
         if(result.data.status==200){
           alert("registered successfully")
+          navigate('/Home')
         }
         else{
           alert("registration failed")

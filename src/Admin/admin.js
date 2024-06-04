@@ -1,46 +1,45 @@
-import React, { useState } from 'react'
-// import '..Admin/adm.css'
+// import React, { useState } from 'react'
+// import './adm.css'
+// import { useNavigate } from 'react-router-dom'
 
-function Admin() {
+// function Admin() {
 
-  const AdmID=123
-  const AdmPass='admin123'
+//   // const [state, setstate] = useState({ adminid: '', password: '' })
+//   // function changes(e) {
+//   //   setstate({ ...state, [e.target.name]: e.target.value })
+//   // }
 
-  const [state,setState]=useState({
-    adminId:'',
-    password:''
-  })
+//   const navigate = useNavigate()
 
-  const update=(o)=>{
-    setState({...state,[o.target.name]:o.target.value})
-  }
+//   // const submit = (e) => {
+//   //   e.preventDefault()
+//   //   if (state.adminid == 12498 && state.password == 'kingpin') {
+//   //     alert("welcome admin")
+//   //     navigate('/dashboard')
+//   //   }
 
-  const submit=(o)=>{
-    o.preventDefault()
-    if(state.adminId==AdmID && state.password==AdmPass){
-      alert('Welcome Admin')
-    }
-    else if(state.adminId!=123){
-      alert('Incorrect ID')
-    }
-    else if(state.password!='admin123'){
-      alert('Invalid Password')
-    }
-  }
+//   //   else if (state.adminid != 12498) {
+//   //     alert("incorrect id")
+//   //   }
 
-  return (
-    <div id="admin">
-    <div className='container text-center'>
-        <h1 style={{color:"white"}}>Admin Login</h1>
-        <br/>
-        <form style={{paddingLeft:'300px', paddingRight:'300px'}}>
-            <input type='number' className='form-control' name='adminId' value={state.adminId} onChange={update} placeholder='enter admin id'/><br/>
-            <input type='password' className='form-control' name='password' value={state.password} onChange={update} placeholder='enter password'/><br/>
-            <input type='submit' onClick={submit}></input>
-        </form>
-    </div>
-    </div>
-  )
-}
+//   //   else if (state.password != 'kingpin') {
+//   //     alert("incorrect password")
+//   //   }
 
-export default Admin
+//   // }
+//   return (
+//     <div id="admin">
+//       <div className='container text-center'>
+//         <h1 style={{ color: "black" }}>Welcome Admin</h1>
+//         <br />
+//         {/* <form onSubmit={submit}>
+//           <input type='number' placeholder='enter admin id' name='adminid' value={state.adminid} onChange={changes} /><br />
+//           <input type='password' placeholder='enter password' name='password' value={state.password} onChange={changes} /><br />
+//           <input type='submit' />
+//         </form> */}
+//       </div>
+//     </div>
+//   )
+// }
+
+// export default Admin

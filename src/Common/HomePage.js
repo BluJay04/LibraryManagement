@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
+
 
 function HomePage() {
  const[api,setApi]=useState([])
@@ -17,7 +19,9 @@ function HomePage() {
  console.log(api);
 
   return (
-   <div className="container-fluid overflow-hidden bg-dark p-4">
+   <div className="container-fluid overflow-hidden bg-dark p-4" >
+
+
    <div className="row g-5 d-flex">
     {api.map((a)=>{
       return(
@@ -30,7 +34,7 @@ function HomePage() {
             <h5>{a.productauthor}</h5>
             <h5>{a.productgenre}</h5>
             <p className=''>{a.productdescription}</p>
-            <button className="btn btn-primary col-2 align-start">Buy ${a.productprice}</button>
+            <Link to={`/viewproduct/${a._id}`}><button className="btn btn-primary col-2 align-start">Buy ${a.productprice}</button></Link>
           </div>
         </div>
       )
