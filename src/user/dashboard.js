@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Dashboard() {
   return (
@@ -74,7 +75,7 @@ function Dashboard() {
         
   <img src="https://img.freepik.com/free-photo/smiling-hr-employer-handshaking-successful-job-applicant-hiring-greeting_1163-4102.jpg?t=st=1716962764~exp=1716966364~hmac=ee7f7b4163f20f4279560404b792266ebd5f3a95b9626c0f1e900eef8e9a7c01&w=900" class="card-img-top" alt="..."/>
   <div class="card-body">
-    <h5 class="card-title" style={{fontSize:'25px',textAlign:'center'}}>Add Managers</h5>
+    <Link to={'/Mngr/Registration'}><h5 class="card-title" style={{fontSize:'25px',textAlign:'center'}}>Add Managers</h5></Link>
     
     
   </div>

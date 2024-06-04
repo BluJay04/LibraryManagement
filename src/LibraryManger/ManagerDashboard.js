@@ -1,8 +1,5 @@
 import React from 'react'
 
-import './ManagerDashboard.css'
-import { Link } from 'react-router-dom'
-
 function ManagerDashboard() {
   return (
    <div className='flex bg-dark' style={{ height: '100vh' }}>
@@ -14,12 +11,12 @@ function ManagerDashboard() {
     </div>
     <div class="card text-bg-success m-3 col" style={{ maxWidth: '10rem' }}>
      <div className='btn card-img-overlay img-user'>
-      <Link to={'/viewallusers'} ><div class="bg-transparent" style={{ marginTop: '120px', marginLeft: '8px' }}>Users</div></Link>
+      <div class="bg-transparent" style={{ marginTop: '120px', marginLeft: '8px' }}>Users</div>
      </div>
     </div>
     <div class="card text-bg-primary m-3 col" style={{ maxWidth: '10rem' }}>
      <div className='btn card-img-overlay img-products'>
-      <Link to={'/addproducts'}><div class="bg-transparent" style={{ marginTop: '120px', marginLeft: '8px' }}>Add Books</div></Link>
+      <div class="bg-transparent" style={{ marginTop: '120px', marginLeft: '8px' }}>Add Books</div>
      </div>
     </div>
     <div class="card text-bg-warning m-3 col" style={{ maxWidth: '10rem' }}>

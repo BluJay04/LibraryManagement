@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './profilebg.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 function Editprofile() {
 
@@ -8,13 +9,40 @@ function Editprofile() {
         username:'',
         name:'',
         email:'',
-        dob:'',
-        radio:[]
+        date:'',
+        radio:''
+       
+
         })
+
+        const userid=localStorage.getItem('userid')
+        console.log(userid)
+        const navigate=useNavigate()
 
         function updates(e)
         {
-            setstate({...state,[e.target.username]:e.target.value})
+            setstate({...state,[e.target.name]:e.target.value})
+            
+            console.log(state)
+
+        }
+        function submit(e)
+        {
+            e.preventDefault()
+
+            axios.post(`http://localhost:4000/update/${userid}`,state)
+
+            .then((result)=>{
+                alert("saved changes")
+                console.log(result);
+                navigate(`/userprofile/${userid}`)
+
+
+            })
+
+            .catch((err)=>{
+                alert("please try again")
+            })
         }
   return (
     
@@ -45,37 +73,37 @@ function Editprofile() {
                             </div>
                             <div class="col">
                                 <p class="card-text" style={{color:'white'}}>
-                                    <input type='text' placeholder='enter user name' onChange={updates}/>
+                                    <input type='text' name='username' value={state.username} placeholder='enter user name' onChange={updates}/>
                                     <br/><br/><br/>
-                                    <input type='text' placeholder='enter name' onChange={updates}/>
+                                    <input type='text' name='name' value={state.name} placeholder='enter name' onChange={updates}/>
                                     <br/><br/>
-                                    <input type='text' placeholder='enter email-id' onChange={updates}/>
+                                    <input type='text' placeholder='enter email-id' name='email' value={state.email} onChange={updates}/>
                                     <br/><br/><br/>
-                                    <input type='date' placeholder='enter dob' onChange={updates}/>
+                                    <input type='date' placeholder='enter dob' name='date' value={state.date} onChange={updates}/>
                                 </p>
                             </div>
 
                        
                         </div>
-                        <Link to='/userprofile'><button class='btn btn-primary'>save changes</button></Link>
+                        <button class='btn btn-primary' onClick={submit}>save changes</button>
                         </div>
                     </div>
                 </div>
                 <div class='card' id='bg'>
                     <h1 class="card-title" style={{textAlign:'center', color:'white'}}>About Me</h1>
-                    <p class="card-body" style={{color:'white'}}><h2>intrested genre's:</h2> <br/>
-                    <form>
-                        <input type='radio' value={'horror'}/>horror &nbsp;
-                        <input type='radio' value={'sci-fi'}/>sci-fi &nbsp;
-                        <input type='radio' value={'biography'}/>biography &nbsp;
-                        <input type='radio' value={'auto-biography'}/>auto-biography &nbsp;
-                        <input type='radio' value={'fiction'}/>fiction &nbsp;
-                        <input type='radio' value={'non-fiction'}/>non-fiction &nbsp;
-                        <input type='radio' value={'thriller'}/>thriller &nbsp;
-                        <input type='radio' value={'crime'}/>crime &nbsp;
-                        <input type='radio' value={'true-crime'}/>true-crime &nbsp;
-                        <input type='radio' value={'Romance'}/>Romance &nbsp;
-                    </form>
+                    <p class="card-body" style={{color:'white'}}><h2>Favourite genre    :</h2> <br/>
+                    
+                        <input type='radio' name='radio' onChange={updates} value='horror'/>horror &nbsp;
+                        <input type='radio' name='radio' onChange={updates} value='sci-fi'/>sci-fi &nbsp;
+                        <input type='radio' name='radio' onChange={updates} value='biography'/>biography &nbsp;
+                        <input type='radio' name='radio' onChange={updates} value='auto-biography'/>auto-biography &nbsp;
+                        <input type='radio' name='radio' onChange={updates} value='fiction'/>fiction &nbsp;
+                        <input type='radio' name='radio' onChange={updates} value='non-fiction'/>non-fiction &nbsp;
+                        <input type='radio' name='radio' onChange={updates} value='thriller'/>thriller &nbsp;
+                        <input type='radio' name='radio' onChange={updates} value='crime'/>crime &nbsp;
+                        <input type='radio' name='radio' onChange={updates} value='true-crime'/>true-crime &nbsp;
+                        <input type='radio' name='radio' onChange={updates} value='Romance'/>Romance &nbsp;
+                    
                     <h2>More about me:</h2>
                     <form>
                         <textarea style={{height:"230px", width:'350px'}}/>

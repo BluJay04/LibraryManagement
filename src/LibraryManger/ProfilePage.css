@@ -1,0 +1,6 @@
+.bg-card{
+ background-image: url('https://img.freepik.com/free-photo/open-book-blank-white-pages_53876-160712.jpg?size=626&ext=jpg&uid=R149555453&ga=GA1.1.1804121475.1701182707&semt=sph');
+}
+.textbox::placeholder{
+ text-align: justify;
+}

@@ -1,10 +1,7 @@
-import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
 
-
-function HomePage() {
- const[api,setApi]=useState([])
+const[api,setApi]=useState([])
  useEffect(()=>{
  axios.post(`http://localhost:4000/viewall`)
  .then((res)=>{
@@ -18,10 +15,9 @@ function HomePage() {
 
  console.log(api);
 
+function ViewUsers() {
   return (
-   <div className="container-fluid overflow-hidden bg-dark p-4" >
-
-
+   <div className="container-fluid overflow-hidden bg-dark p-4">
    <div className="row g-5 d-flex">
     {api.map((a)=>{
       return(
@@ -34,7 +30,7 @@ function HomePage() {
             <h5>{a.productauthor}</h5>
             <h5>{a.productgenre}</h5>
             <p className=''>{a.productdescription}</p>
-            <Link to={`/viewproduct/${a._id}`}><button className="btn btn-primary col-2 align-start">Buy ${a.productprice}</button></Link>
+            <button className="btn btn-primary col-2 align-start">Buy ${a.productprice}</button>
           </div>
         </div>
       )
@@ -44,4 +40,4 @@ function HomePage() {
   )
 }
 
-export default HomePage
+export default ViewUsers

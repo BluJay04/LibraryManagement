@@ -18,10 +18,16 @@ import Profileview from './user/Profileview';
 import Editprofile from './user/Editprofile';
 import Forgotpassword from './user/forgotpassword';
 import Dashboard from './user/dashboard';
-import Managerdashboard from './LibraryManger/Managerdashboard';
-import Addproducts from './Products/addproducts';
 import ViewAllUsers from './LibraryManger/ViewAllUsers';
 import Viewone from './user/Viewone';
+import ManagerDashboard from './LibraryManger/Managerdashboard';
+import Addproducts from './Products/Addproducts';
+
+import ViewOneProduct from './Products/ViewOneProduct';
+import ViewCart from './Products/ViewCart';
+// import Managerdashboard from './LibraryManger/Managerdashboard';
+// import Addproducts from './Products/addproducts';
+// import ManagerDashboard from './LibraryManger/Managerdashboard';
 
 
 function App() {
@@ -29,7 +35,8 @@ function App() {
     <BrowserRouter>
     <div>
       
-     
+
+      
 
       
       <Routes>
@@ -44,14 +51,14 @@ function App() {
       
 
       {/* newchange profile view for user*/}
-      <Route path="/userprofile" element={[<NavBar/>,<Profileview/>,<Footer/>]}/>
+      <Route path="/userprofile/:id" element={[<NavBar/>,<Profileview/>,<Footer/>]}/>
       <Route path="/editprofile" element={[<NavBar/>,<Editprofile/>,<Footer/>]}/>
       <Route path="/dashboard" element={<Dashboard/>}/>
-      <Route path="/managerdashboard" element={<Managerdashboard/>}/>
-      <Route path="/addproducts" element={<Addproducts/>}/>
       <Route path="/viewallusers" element={<ViewAllUsers/>}/>
-      <Route path="/viewoneuser/:id" element={<Viewone/>}/>
-      
+      <Route path="/viewone/:id" element={<Viewone/>}/>
+      <Route path="/managerdashboard" element={<ManagerDashboard/>}/>
+      <Route path="/addproducts" element={<Addproducts/>}/>
+      <Route path="/viewproduct/:id" element={<ViewOneProduct/>}/>
 
       
       </Routes>

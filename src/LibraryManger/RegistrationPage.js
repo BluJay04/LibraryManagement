@@ -65,16 +65,17 @@ return (
             <input className='form-control' type='text' placeholder='name@example.com' name='email' value={state.email} onChange={update}></input><br/>
           </div>
           <div class="w-100"></div>
-          <div className='col-2 offset-md-3 col-form-label'>Enter Password</div>
+          <div className='col-2 offset-md-3 col-form-label' onChange={update}>Enter Password</div>
           <div className='col-4'>
             <input className='form-control' type='password' placeholder='Password' name='password' value={state.password} onChange={update}></input><br/>
           </div>
           <div class="w-100"></div>
-          <div className='col-2 offset-md-3 col-form-label'>Confirm Password</div>
+          <div className='col-2 offset-md-3 col-form-label' onChange={update}>Confirm Password</div>
           <div className='col-4'>
             <input className='form-control' type='password' placeholder='Confirm Password' name='confirm' value={state.confirm} onChange={update}></input><br/>
           </div>
           <div className='mt-5 mb-5'>
+            <button type='submit' className='col-4 offset-md-4 btn btn-primary'>Sign Up</button>
             <button type='submit' className='col-4 offset-md-4 btn btn-primary'>Sign Up</button>
           </div>        
         </div>

@@ -27,7 +27,7 @@ function ViewAllUsers() {
                 <div>
                     <img src={`http://localhost:4000/` +a.image?.filename} /><br/>
                     {a.name}<br/>
-                    <Link to={`/viewoneuser/${a._id}`}><button class='btn btn-primary'>View details</button></Link>
+                    <Link to={`/viewone/${a._id}`}><button class='btn btn-primary'>View details</button></Link>
                     </div>
             )
         })

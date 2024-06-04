@@ -25,9 +25,11 @@ function Userlogin() {
         axios.post('http://localhost:4000/login', state)
 
             .then((result) => {
-                
+                console.log(result);
                 if(result.data.status==200)
                     {
+                        localStorage.setItem("userid",result.data.data._id)
+                        console.log(result.data.data._id);
                         navigate('/home')
 
                     }
